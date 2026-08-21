@@ -1,0 +1,23 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple circular badge -->
+  <circle cx="32" cy="32" r="30" fill="#1B2A4A"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#2E9CA6" stroke-width="2.5"/>
+
+  <!-- Wrench icon representing repair -->
+  <g transform="translate(32,32) rotate(-45) translate(-32,-32)">
+    <path d="M20 14
+             a7 7 0 0 1 9.5 8.5
+             l14 14
+             a4 4 0 0 1 -5.5 5.5
+             l-14 -14
+             a7 7 0 0 1 -8.5 -9.5
+             l4 4
+             a3 3 0 0 0 4 -4
+             l-4 -4
+             z"
+          fill="#FFFFFF"/>
+  </g>
+
+  <!-- Small spark accent -->
+  <circle cx="44" cy="20" r="3" fill="#2E9CA6"/>
+</svg>
