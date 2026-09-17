@@ -1,2 +1,45 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/PhWn_eB9)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24289084&assignment_repo_type=AssignmentRepo)
+# TechFix Solutions – Website (WEDE5020 Part 2)
+
+Multi-page website for a fictional local tech repair business.
+
+## Pages
+- index.html – Home
+- services.html – Services
+- about.html – About Us
+- gallery.html – Completed repairs
+- contact.html – Contact form and details
+
+## How to view
+1. Open the project folder in VS Code
+2. Open index.html with Live Server (or open in a browser)
+3. Resize the browser to test tablet and mobile layouts
+
+## Technologies
+- HTML5
+- CSS3 (Flexbox, Grid, media queries, pseudo-classes)
+- Google Fonts (Outfit, Plus Jakarta Sans)
+
+## Folder structure
+techfix/
+├── index.html
+├── services.html
+├── about.html
+├── gallery.html
+├── contact.html
+├── css/
+│   └── style.css
+└── images/
+## References
+- Google Fonts – Outfit & Plus Jakarta Sans: https://fonts.google.com
+- MDN Web Docs – CSS Flexbox, Grid, Media Queries: https://developer.mozilla.org
+- W3Schools – CSS pseudo-classes https://www.w3schools.com/css/ 
+- Rosebank International / IIE WEDE5020 CSS Fundamentals slides (Parts 1 & 2)
+
+## Screenshots
+![Desktop - Home page](screenshots/index-desktop.png)
+![Tablet - Home page](screenshots/index-tablet.png)
+![Mobile - Home page](screenshots/index-mobile.png)
+
+![Desktop - Services page](screenshots/services-desktop.png)
+![Tablet - Services page](screenshots/services-tablet.png)
+![Mobile - Services page](screenshots/services-mobile.png)
