@@ -3,90 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechFix Solutions | Services</title>
+  <title>Our Services | TechFix Solutions – Phone, Laptop & Console Repair</title>
+  <meta name="description" content="Phone repair, laptop upgrades, gaming console fixes and small-business IT support from TechFix Solutions in Pretoria.">
+  <meta name="keywords" content="phone repair Pretoria, laptop repair, console repair, screen replacement, battery swap, IT support">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <header>
     <div class="logo">
-      <img src="images/logo.svg" alt="TechFix Solutions logo" class="logo-img">
+      <img src="images/logo.svg" alt="TechFix Solutions logo" class="logo-img" width="34" height="34">
       <span>TechFix Solutions</span>
     </div>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-
     <section>
       <h1>Our Services</h1>
       <p>
-        TechFix Solutions repairs a wide range of everyday devices for students, households,
-        gamers and small businesses. Below is a breakdown of what we offer.
+        TechFix Solutions repairs everyday devices for students, households, gamers and
+        small businesses. Use the search or filters below to find a service quickly.
       </p>
     </section>
 
-    <!-- Individual service descriptions, each with an image and detail list -->
     <section>
-      <h2>Phone Repair</h2>
-      <img src="images/phone-repair.jpg" alt="Technician replacing a cracked smartphone screen">
-      <p>We repair most smartphone brands, including:</p>
-      <ul>
-        <li>Screen replacements</li>
-        <li>Battery replacements</li>
-        <li>Water damage recovery</li>
-        <li>Charging port repairs</li>
-      </ul>
-    </section>
+      <div class="search-bar">
+        <label for="service-search" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;">Search services</label>
+        <input type="search" id="service-search" placeholder="Search services…" aria-label="Search services">
+        <div class="filter-btns" role="group" aria-label="Filter by category">
+          <button type="button" data-filter="all" class="active">All</button>
+          <button type="button" data-filter="phone">Phone</button>
+          <button type="button" data-filter="laptop">Laptop</button>
+          <button type="button" data-filter="console">Console</button>
+          <button type="button" data-filter="business">Business IT</button>
+        </div>
+      </div>
+      <p id="no-results" class="no-results">No services match your search. Try a different keyword.</p>
 
-    <section>
-      <h2>Laptop Repair</h2>
-      <img src="images/laptop-repair.jpg" alt="Laptop internals exposed during a hardware repair">
-      <p>Our laptop repair service covers:</p>
-      <ul>
-        <li>Hardware diagnostics and component replacement</li>
-        <li>Software troubleshooting and reinstalls</li>
-        <li>Performance upgrades (RAM, storage)</li>
-        <li>Keyboard and screen repairs</li>
-      </ul>
-    </section>
+      <div class="service-grid">
+        <article class="service-card" data-category="phone">
+          <img src="images/phone-repair.jpg" alt="Cracked smartphone screen on a repair mat" width="400" height="250">
+          <h2>Phone Repair</h2>
+          <p>We repair most smartphone brands, including:</p>
+          <ul>
+            <li>Screen replacements</li>
+            <li>Battery replacements</li>
+            <li>Water damage recovery</li>
+            <li>Charging port repairs</li>
+          </ul>
+        </article>
 
-    <section>
-      <h2>Gaming Console Repair</h2>
-      <img src="images/console-repair.jpg" alt="Gaming console opened for internal cleaning and repair">
-      <p>We service common consoles for issues such as:</p>
-      <ul>
-        <li>Overheating and fan replacement</li>
-        <li>Disc drive faults</li>
-        <li>Controller repairs</li>
-        <li>General cleaning and maintenance</li>
-      </ul>
-    </section>
+        <article class="service-card" data-category="laptop">
+          <img src="images/laptop-repair.jpg" alt="Technician soldering a laptop circuit board" width="400" height="250">
+          <h2>Laptop Repair</h2>
+          <p>Our laptop repair service covers:</p>
+          <ul>
+            <li>Hardware diagnostics and component replacement</li>
+            <li>Software troubleshooting and reinstalls</li>
+            <li>Performance upgrades (RAM, storage)</li>
+            <li>Keyboard and screen repairs</li>
+          </ul>
+        </article>
 
-    <section>
-      <h2>IT Support for Small Businesses</h2>
-      <img src="images/it-support.jpg" alt="Technician setting up computer equipment for a small business">
-      <p>For small business clients, we offer:</p>
-      <ul>
-        <li>Basic network and Wi-Fi troubleshooting</li>
-        <li>Computer setup and configuration</li>
-        <li>Ongoing maintenance support</li>
-      </ul>
+        <article class="service-card" data-category="console">
+          <img src="images/console-repair.jpg" alt="Gaming controller open for repair" width="400" height="250">
+          <h2>Gaming Console Repair</h2>
+          <p>We service common consoles for issues such as:</p>
+          <ul>
+            <li>Overheating and fan replacement</li>
+            <li>Disc drive faults</li>
+            <li>Controller repairs</li>
+            <li>General cleaning and maintenance</li>
+          </ul>
+        </article>
+
+        <article class="service-card" data-category="business">
+          <img src="images/it-support.jpg" alt="Technician providing IT support at a workbench" width="400" height="250">
+          <h2>IT Support for Small Businesses</h2>
+          <p>For small business clients, we offer:</p>
+          <ul>
+            <li>Basic network and Wi-Fi troubleshooting</li>
+            <li>Computer setup and configuration</li>
+            <li>Ongoing maintenance support</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <section>
       <h2>Ready to Book a Repair?</h2>
-      <a href="contact.html" class="cta-button">Contact Us</a>
+      <a href="enquiry.html" class="cta-button">Send Repair Enquiry</a>
     </section>
-
   </main>
 
   <footer>
@@ -97,6 +113,7 @@
       <a href="about.html">About Us</a>
     </p>
   </footer>
-
+  <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
 </body>
 </html>

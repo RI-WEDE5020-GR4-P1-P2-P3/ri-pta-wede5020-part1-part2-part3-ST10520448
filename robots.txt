@@ -1,0 +1,5 @@
+# TechFix Solutions – robots.txt (Part 3 SEO)
+User-agent: *
+Allow: /
+
+Sitemap: https://YOUR-USERNAME.github.io/techfix/sitemap.xml

@@ -3,75 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechFix Solutions | Contact Us</title>
+  <title>Contact Us | TechFix Solutions Pretoria</title>
+  <meta name="description" content="Contact TechFix Solutions in Pretoria for general enquiries. Phone, email, interactive map and online message form with validation.">
+  <meta name="keywords" content="contact TechFix Pretoria, phone repair contact, laptop repair Pretoria, tech support phone number">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Leaflet CSS for interactive map (CDN) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
-
   <header>
     <div class="logo">
-      <img src="images/logo.svg" alt="TechFix Solutions logo" class="logo-img">
+      <img src="images/logo.svg" alt="TechFix Solutions logo" class="logo-img" width="34" height="34">
       <span>TechFix Solutions</span>
     </div>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-
     <section>
       <h1>Contact Us</h1>
       <p>
-        Have a device that needs fixing, or a question about our services? Reach out
-        using the details below or send us a message directly.
+        Have a general question or want to send a message to the team? Use the details
+        below or the form. For a <strong>repair quote</strong>, please use the
+        <a href="enquiry.html">Enquiry page</a> instead.
       </p>
     </section>
 
-    <!-- Business hours and direct contact details -->
     <section class="card-group">
       <div class="card">
         <h2>Business Hours</h2>
         <ul>
-          <li>Monday - Friday: 08:00 - 17:00</li>
-          <li>Saturday: 09:00 - 13:00</li>
+          <li>Monday – Friday: 08:00 – 17:00</li>
+          <li>Saturday: 09:00 – 13:00</li>
           <li>Sunday: Closed</li>
         </ul>
       </div>
       <div class="card">
         <h2>Contact Details</h2>
         <p>
-          Phone: 012 345 6789<br>
-          Email: info@techfixsolutions.co.za<br>
-          Address: 123 Example Street, Pretoria
+          Phone: <a href="tel:+27123456789">012 345 6789</a><br>
+          Email: <a href="mailto:info@techfixsolutions.co.za">info@techfixsolutions.co.za</a><br>
+          Address: 485 Pretorious str, Pretoria
         </p>
-        <p><em>Placeholder details — replace with your chosen business information.</em></p>
       </div>
     </section>
 
-    <!-- Enquiry form for direct customer contact -->
+    <!-- Interactive map (Leaflet) – Part 3 rubric -->
     <section>
-      <h2>Send Us a Message</h2>
-      <form action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit" class="cta-button">Submit</button>
-      </form>
+      <h2>Find Us</h2>
+      <p>Our workshop is based in Pretoria. Zoom and pan the map to explore the area.</p>
+      <div id="map" class="map-container" role="img" aria-label="Interactive map showing TechFix Solutions location in Pretoria"></div>
     </section>
 
+    <section>
+      <h2>Send Us a Message</h2>
+      <form id="contact-form" action="#" method="post" novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required minlength="2" autocomplete="name">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div>
+          <label for="message-type">Message type</label>
+          <select id="message-type" name="message-type" required>
+            <option value="">Select…</option>
+            <option value="general">General enquiry</option>
+            <option value="feedback">Feedback</option>
+            <option value="partnership">Partnership / supplier</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+        </div>
+        <button type="submit" class="cta-button">Submit</button>
+        <div id="contact-success" class="form-success" tabindex="-1">
+          Thank you. Your message has been received. We will reply to the email address you provided.
+        </div>
+      </form>
+    </section>
   </main>
 
   <footer>
@@ -79,9 +102,26 @@
     <p>
       <a href="index.html">Home</a> |
       <a href="services.html">Services</a> |
-      <a href="about.html">About Us</a>
+      <a href="enquiry.html">Enquiry</a>
     </p>
   </footer>
-
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <!-- Leaflet JS for interactive map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    // Simple interactive map centred on Pretoria (fictional workshop pin)
+    document.addEventListener('DOMContentLoaded', function () {
+      var map = L.map('map').setView([-25.7479, 28.2293], 14);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      L.marker([-25.7479, 28.2293])
+        .addTo(map)
+        .bindPopup('<strong>TechFix Solutions</strong><br>123 Example Street, Pretoria')
+        .openPopup();
+    });
+  </script>
 </body>
 </html>
