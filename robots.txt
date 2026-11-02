@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-USERNAME.github.io/techfix/sitemap.xml
+Sitemap: https://clever-custard-f7935c.netlify.app 
