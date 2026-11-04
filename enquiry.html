@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repair Enquiry | TechFix Solutions – Get a Quote</title>
+  <meta name="description" content="Request a repair estimate from TechFix Solutions. Tell us your device and issue for typical turnaround and next steps.">
+  <meta name="keywords" content="repair quote Pretoria, phone repair estimate, laptop repair cost, console repair booking">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="TechFix Solutions logo" class="logo-img" width="34" height="34">
+      <span>TechFix Solutions</span>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Repair Enquiry</h1>
+      <p>
+        Use this form to enquire about a <strong>repair service</strong> (phone, laptop,
+        console or other). After validation we show typical turnaround and next steps.
+        For general messages, use the <a href="contact.html">Contact page</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Request an Estimate</h2>
+      <form id="enquiry-form" action="#" method="post" novalidate>
+        <div>
+          <label for="enq-name">Full name</label>
+          <input type="text" id="enq-name" name="name" required minlength="2" autocomplete="name">
+        </div>
+        <div>
+          <label for="enq-email">Email</label>
+          <input type="email" id="enq-email" name="email" required autocomplete="email">
+        </div>
+        <div>
+          <label for="enq-phone">Phone</label>
+          <input type="tel" id="enq-phone" name="phone" required autocomplete="tel" placeholder="e.g. 082 123 4567">
+        </div>
+        <div>
+          <label for="enq-device">Device type</label>
+          <select id="enq-device" name="device" required>
+            <option value="">Select device…</option>
+            <option value="phone">Phone / smartphone</option>
+            <option value="laptop">Laptop / notebook</option>
+            <option value="console">Gaming console</option>
+            <option value="other">Other device</option>
+          </select>
+        </div>
+        <div>
+          <label for="enq-issue">Describe the issue</label>
+          <textarea id="enq-issue" name="issue" rows="5" required minlength="10" placeholder="e.g. Cracked screen, overheating, won't charge…"></textarea>
+        </div>
+        <button type="submit" class="cta-button">Get Estimate</button>
+        <div id="enquiry-response" class="enquiry-response" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 TechFix Solutions. All rights reserved.</p>
+    <p>
+      <a href="contact.html">Contact</a> |
+      <a href="index.html">Home</a> |
+      <a href="services.html">Services</a>
+    </p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
